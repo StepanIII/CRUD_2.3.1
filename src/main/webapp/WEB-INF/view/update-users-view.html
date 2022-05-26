@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update users</title>
+</head>
+<body>
+<form th:action="@{/user/update}" th:object="${user}" th:method="post">
+    <input type="hidden" th:field="${user.id}">
+    Name <input type="text" th:field="${user.name}"/>
+    <br><br>
+    Surname <input type="text" th:field="${user.surname}"/>
+    <br><br>
+    Age <input type="text" th:field="${user.age}"/>
+    <br><br>
+    Email <input type="text" th:field="${user.email}"/>
+    <br><br>
+    Number phone <input type="text" th:field="${user.numberPhone}"/>
+    <br><br>
+
+    <input type="submit" value="Update user">
+</form>
+</body>
+</html>
