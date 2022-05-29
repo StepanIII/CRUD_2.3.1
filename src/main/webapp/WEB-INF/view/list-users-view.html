@@ -27,14 +27,17 @@
         <td th:text="${user.email}"/>
         <td th:text="${user.numberPhone}"/>
         <td>
-            <a th:href="@{/user/update/{id}(id=${user.id})}" class="updDel">Update</a>
-            <a th:href="@{/user/delete/{id}(id=${user.id})}" class="updDel">Delete</a>
+            <a th:href="@{/users/{id}/update(id=${user.id})}" class="updDel">Update</a>
+            <form th:action="@{/users/{id}(id=${user.id})}" th:method="delete">
+                <input type="submit" value="Delete">
+            </form>
+            <a th:href="@{/users/{id}(id=${user.id})}" class="updDel">Show user</a>
         </td>
     </tr>
     </tbody>
 </table>
 
-<a th:href="@{/user/add}" id="addButton">Add new user</a>
+<a th:href="@{/users/add}" id="addButton">Add new user</a>
 
 </body>
 </html>

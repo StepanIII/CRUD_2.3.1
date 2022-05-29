@@ -5,16 +5,21 @@
     <title>Save users</title>
 </head>
 <body>
-    <form th:action="@{/user/add}" th:object="${user}" th:method="post">
-        Name <input type="text" th:field="${user.name}"/>
+    <form th:action="@{/users}" th:object="${user}" th:method="post">
+        <label for="name">Enter name:</label>
+        <input type="text" th:field="${user.name}" id="name"/>
         <br><br>
-        Surname <input type="text" th:field="${user.surname}"/>
+        <label for="surname">Enter surname:</label>
+        <input type="text" th:field="${user.surname}" id="surname"/>
         <br><br>
-        Age <input type="text" th:field="${user.age}"/>
+        <label for="age">Enter age:</label>
+        <input type="text" th:field="${user.age}" id="age"/>
         <br><br>
-        Email <input type="text" th:field="${user.email}"/>
+        <label for="email">Enter email:</label>
+        <input type="text" th:field="${user.email}" id="email"/>
         <br><br>
-        Number phone <input type="text" th:field="${user.numberPhone}"/>
+        <label for="numberPhone">Enter number phone:</label>
+        <input type="text" th:field="${user.numberPhone}" id="numberPhone"/>
         <br><br>
 
         <input type="submit" value="Add user">
