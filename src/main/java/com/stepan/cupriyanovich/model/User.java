@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "users")
+@Table(name = "user")
 public class User {
 
     @Id
@@ -19,7 +19,7 @@ public class User {
     private String surname;
 
     @Column(name = "age")
-    private int age;
+    private Integer age;
 
     @Column(name = "email")
     private String email;
@@ -30,7 +30,7 @@ public class User {
     public User() {
     }
 
-    public User(String name, String surname, int age, String email, String numberPhone) {
+    public User(String name, String surname, Integer age, String email, String numberPhone) {
         this.name = name;
         this.surname = surname;
         this.age = age;
@@ -62,11 +62,11 @@ public class User {
         this.surname = surname;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
